@@ -149,9 +149,19 @@ Map<String, Integer> map = new HashMap<>();
 - ключи обязаны реализовывать Comparable для натурального порядка (или нужен Comparator для сравнения)
 - асимптотика O(log n)
 
+
+
 1. Если нужен список использовать реализацию ArrayList (массив) не использовать LinkedList (двусвязный список, работает медленнее, часто вызывает GC)
 2. Использовать интерфейсы для объявления переменных и для параметров метода а не реализации.
 ```java
 Map<String, Integer> map = new HashMap<>();
+```
+
+
+### Фабричные методы для создания неизменяемых (immutable) коллекций
+```java
+List<String> list = List.of("A", "B", "C");
+Set<Integer> set = Set.of(1, 2, 3);
+Map<String, Integer> map = Map.of("key1", 1, "key2", 2);
 ```
 
