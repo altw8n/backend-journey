@@ -34,20 +34,20 @@ Function<Integer, Integer> complex = x -> {
 ```java
 @FunctionalInterface
 public interface MyInterface {
-    // ✅ Ровно ОДИН абстрактный метод
+    //  Ровно ОДИН абстрактный метод
     void doSomething(String param);
 
-    // ✅ Можно иметь default методы (не считаются абстрактными)
+    //  Можно иметь default методы 
     default void doSomethingElse() {
         System.out.println("Default");
     }
 
-    // ✅ Можно иметь static методы
+    //  Можно иметь static методы
     static void staticMethod() {
         System.out.println("Static");
     }
 
-    // ✅ Можно переопределять методы из Object (не считаются)
+    //  Можно переопределять методы из Object 
     @Override
     boolean equals(Object obj);
 }
@@ -162,9 +162,3 @@ String::toUpperCase
 () -> new ArrayList<>()
 ArrayList::new
 ```
-
-
-
-
-
-
